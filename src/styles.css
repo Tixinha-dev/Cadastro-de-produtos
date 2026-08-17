@@ -1,0 +1,220 @@
+/* ==========================================================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GERAIS (RESET)
+   ========================================================================== */
+:root {
+  --cor-clara-secundaria: #f5f7fa;
+  --cor-clara-primaria: #ffffff;
+  --cor-botao: #2563eb;
+  --cor-botao-hover: #1d4ed8;
+  --cor-de-fundo-escuro: #1f2937;
+  --cor-texto: #6b7280;
+  --cor-borda: #e5e7eb;
+  --cor-sucesso: #22c55e;
+  --cor-perigo: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--cor-clara-secundaria);
+}
+
+/* ==========================================================================
+   2. LAYOUT GLOBAL E SEÇÕES (MAIN)
+   ========================================================================== */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  padding: 1.5rem;
+}
+
+/* Estrutura base dos cards de conteúdo */
+.sessao-do-forms, 
+.sessao-de-pre-visualizacao, 
+.sessao-de-produtos-cadastrados {
+  background-color: var(--cor-clara-primaria);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sessao-do-forms, 
+.sessao-de-pre-visualizacao {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 300px;
+}
+
+.sessao-de-produtos-cadastrados {
+  flex: 0 0 100%;
+}
+
+/* ==========================================================================
+   3. CABEÇALHO (HEADER & NAV)
+   ========================================================================== */
+header {
+  background-color: var(--cor-de-fundo-escuro);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  color: var(--cor-clara-primaria);
+}
+
+h1 {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   4. FORMULÁRIOS E CAMPOS DE ENTRADA
+   ========================================================================== */
+.sessao-do-forms form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sessao-do-forms form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Quebra de layout (Campos lado a lado) */
+.sessao-do-forms .quebra-de-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: none;
+  gap: 1rem;
+}
+
+.sessao-do-forms .quebra-de-layout div {
+  flex: 1 1 calc(50% - 0.5rem);
+  min-width: 140px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--cor-texto);
+}
+
+input, 
+textarea, 
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+/* Botões */
+button {
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="button"] {
+  border: 0.1rem solid var(--cor-borda);
+}
+
+button[type="submit"] {
+  background-color: var(--cor-botao);
+  color: white;
+  border: none;
+  padding: 0.7rem;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+/* ==========================================================================
+   5. COMPONENTE: CARD DE PRÉ-VISUALIZAÇÃO
+   ========================================================================== */
+.titulo-da-sessao-previsualizacao {
+  margin-bottom: 1rem;
+}
+
+.card {
+  width: 70%;
+  margin: 0 auto;
+  padding: .5rem;
+  border: 1px solid var(--cor-borda);
+}
+
+.card-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24.5rem;
+  height: 14rem;
+  margin: 0 auto;
+  background-image: url("./img/img-padrao.png");
+  border: 1px solid var(--cor-borda);
+}
+.card-titulo-container{
+  font-size: 1.5rem;
+}
+.card-titulo-container, 
+.card-descricao-container {
+  margin: 0.5rem 0;
+}
+
+.card-info-geral-container ul {
+  list-style: none;
+}
+
+.card-info-geral-container ul li {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.card-info-geral-container ul li > * {
+  flex: 1;
+}
+
+#precoPrevia {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   6. COMPONENTE: TABELA DE DADOS
+   ========================================================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, 
+td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid var(--cor-borda);
+}
+td{
+  /* visibility: hidden; */
+}
+
+th {
+  background-color: var(--cor-clara-secundaria);
+  color: var(--cor-texto);
+}

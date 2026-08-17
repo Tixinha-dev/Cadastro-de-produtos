@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./bundle.js" defer></script>
+    <title>Meu Novo Projeto</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
+                    <path d="M15 40 L50 60 L50 90 L15 70 Z" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M50 60 L85 40 L85 70 L50 90 Z" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M50 15 L85 40 L50 60 L15 40 Z" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" />
+                    <path d="M32.5 27.5 L67.5 47.5" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+                    <path d="M50 60 L50 66" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+                </svg>
+
+            </div>
+            <h1>Cadastro de Produtos</h1>
+        </nav>
+    </header>
+    <main>
+
+        <section class="sessao-do-forms">
+            <form>
+                <div>
+                    <h2>Cadastro de Produto</h2>
+                </div>
+                <div>
+                    <label for="nomeDoProduto">Nome do produto</label>
+                    <input type="text" name="nomeDoProduto" id="nomeDoProduto" placeholder="Digite o nome do produto...">
+                    <label for="descricao">Descrição</label>
+                    <textarea name="descricao" id="descricao" placeholder="Digite a descrição..."></textarea>
+                </div>
+            <fieldset class="quebra-de-layout">
+                <div>
+                    <label for="categoria">Categoria</label>
+                    <select name="categoria" id="categoria">
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="moveis">Móveis</option>
+                        <option value="acessorios">Acessórios</option>
+                        <option value="calcados">Calçados</option>
+                        <option value="roupas">Roupas</option>
+                        <option value="esporte">Esporte</option>
+                        <option value="beleza">Beleza</option>
+                        <option value="tecnologia">Tecnologia</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="marca">Marca</label>
+                    <input type="text" name="marca" id="marca" placeholder="Digite a marca...">
+                </div>
+                <div>
+                    <label for="preco">Preço</label>
+                    <input type="number" name="preco" id="preco" min="0" step="0.01" placeholder="R$00,00" required>
+                </div>
+                <div>
+                    <label for="estoque">Estoque</label>
+                    <input type="number" name="estoque" id="estoque" min="0" placeholder="0" required>
+                </div>
+            </fieldset>
+                <div>
+                    <label for="imagem-forms">Imagem</label>
+                    <input type="file" name="imagem-forms" id="imagemDoProduto">
+                </div>
+                <div>
+                    <button type="submit" id="salvarProduto">Salvar produto</button>
+                </div>
+            </form>
+        </section>
+        <section
+        class="sessao-de-pre-visualizacao">
+            <div>
+                <h2 class="titulo-da-sessao-previsualizacao">Pré-visualização</h2>
+            </div>
+            <div>
+                <div class="card">
+                    <div class="card-img-container" id="imagemDoProdutoPrevia">
+                    </div>
+                    <div class="card-titulo-container">
+                        <h3 id="nomeDoProdutoPrevia">Nome do produto</h3>
+                    </div>
+                    <div class="card-descricao-container">
+                        <p id="descricaoPrevia">Descrição do produto aparecerá aqui.</p>
+                    </div>
+                    <hr>
+                    <div class="card-info-geral-container">
+                        <ul>
+                            <li>
+                                <span>Categoria:</span>
+                                <span id="categoriaPrevia">-</span>
+                            </li>
+                            <li>
+                                <span>Marca:</span>
+                                <span id="marcaPrevia">-</span>
+                            </li>
+                            <li>
+                                <span>Estoque:</span>
+                                <span id="estoquePrevia">-</span>
+                            </li>
+                        </ul>
+                        <span id="precoPrevia">R$ 0,00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section
+    class="sessao-de-produtos-cadastrados">
+        <h2>Produtos Cadastrados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Marca</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+    </main>
+</body>
+
+</html>
